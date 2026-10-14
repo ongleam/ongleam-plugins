@@ -1,0 +1,17 @@
+{
+  "name": "ongleam-beta",
+  "plugins": [
+    {
+      "name": "ongleam-beta",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ongleam-beta"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

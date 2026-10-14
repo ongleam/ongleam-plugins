@@ -1,0 +1,11 @@
+{
+  "name": "ongleam-plugins",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "plugins:sync": "bun --no-env-file scripts/plugins/sync.mjs",
+    "plugins:check": "bun --no-env-file scripts/plugins/sync.mjs --check",
+    "check": "bun run plugins:check"
+  }
+}

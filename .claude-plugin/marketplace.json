@@ -1,0 +1,14 @@
+{
+  "name": "ongleam-beta",
+  "description": "OnGleam 콘텐츠·인플루언서·광고 조회와 수집 업무 안내. Workflows for OnGleam data queries and collection. MCP 연결은 서비스 배포 후 제공됩니다.",
+  "owner": {
+    "name": "OnGleam"
+  },
+  "plugins": [
+    {
+      "name": "ongleam-beta",
+      "description": "OnGleam 콘텐츠·인플루언서·광고 조회와 수집 업무 안내. Workflows for OnGleam data queries and collection. MCP 연결은 서비스 배포 후 제공됩니다.",
+      "source": "./plugins/ongleam-beta"
+    }
+  ]
+}
