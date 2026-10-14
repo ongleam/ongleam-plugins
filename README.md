@@ -37,7 +37,7 @@ claude plugin validate ./.claude-plugin/marketplace.json
 
 생성 파일은 `plugins/ongleam-beta/.claude-plugin/plugin.json`, `plugins/ongleam-beta/.codex-plugin/plugin.json`, `plugins/ongleam-beta/.mcp.json`, `.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`이다. 변경 기여는 PR에서 검토한다.
 
-beta 개발 저장소의 localhost 전용 플러그인은 이 저장소의 사용자용 `plugin.json`과 `use-ongleam` 스킬만 명시적으로 동기화한다. 향후 이 저장소에 사용자 MCP 설정이 추가되어도 이를 개발용 localhost 연결로 자동 복사하지 않는다.
+이 공개 저장소는 사용자 플러그인만 소유한다. 비공개 beta 저장소는 관리자 플러그인과 별도 localhost E2E 플러그인을 소유하며, 사용자 스킬·MCP 설정을 복사하지 않는다.
 
 ## MCP 연결 상태
 
