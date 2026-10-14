@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ongleam": {
+      "type": "http",
+      "url": "https://beta-api.ongleam.com/mcp"
+    }
+  }
+}

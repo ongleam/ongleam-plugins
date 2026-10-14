@@ -15,9 +15,14 @@ assert.ok(process.argv.length === 2 || (process.argv.length === 3 && check), "Us
 
 const identity = { name, version, description, author };
 const source = `./${pluginPath}`;
+const mcp = JSON.parse(await readFile(new URL(`${pluginPath}/mcp.json`, root), "utf8"));
+assert.deepEqual(Object.keys(mcp.mcpServers), ["ongleam"]);
+assert.equal(mcp.mcpServers.ongleam.type, "streamable-http");
+assert.equal(mcp.mcpServers.ongleam.url, "https://beta-api.ongleam.com/mcp");
 const outputs = [
-  [`${pluginPath}/.claude-plugin/plugin.json`, identity],
-  [`${pluginPath}/.codex-plugin/plugin.json`, { ...identity, skills: "./skills/" }],
+  [`${pluginPath}/.claude-plugin/plugin.json`, { ...identity, skills: "./skills/", mcpServers: "./.mcp.json" }],
+  [`${pluginPath}/.codex-plugin/plugin.json`, { ...identity, skills: "./skills/", mcpServers: "./.mcp.json" }],
+  [`${pluginPath}/.mcp.json`, { mcpServers: { ongleam: { type: "http", url: mcp.mcpServers.ongleam.url } } }],
   [".claude-plugin/marketplace.json", {
     name, description, owner: author, plugins: [{ name, description, source }]
   }],
