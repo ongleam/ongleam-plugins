@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="620" viewBox="0 0 560 620" role="img" aria-labelledby="title description">
+  <title id="title">Claude에서 OnGleam MCP 연결하기</title>
+  <desc id="description">배포 후 진행할 네 단계 안내 그림. 커넥터 메뉴 열기, MCP 주소 입력, OAuth 로그인, 대화에서 커넥터 켜기. 실제 화면 캡처가 아니다.</desc>
+  <rect width="560" height="620" rx="16" fill="#f9fafb"/>
+  <text x="28" y="47" fill="#121317" font-family="Pretendard, system-ui, sans-serif" font-size="28" font-weight="700">Claude에서 연결</text>
+  <text x="28" y="79" fill="#69717e" font-family="Pretendard, system-ui, sans-serif" font-size="18">배포 후 사용할 원격 MCP 연결 흐름</text>
+  <g font-family="Pretendard, system-ui, sans-serif">
+    <rect x="24" y="104" width="512" height="104" rx="12" fill="#fff" stroke="#e4e7ec"/>
+    <circle cx="59" cy="138" r="19" fill="#2563eb"/>
+    <text x="59" y="145" fill="#fff" text-anchor="middle" font-size="20" font-weight="700">1</text>
+    <text x="92" y="142" fill="#121317" font-size="23" font-weight="700">커넥터 메뉴 열기</text>
+    <text x="92" y="178" fill="#4e5561" font-size="22">사용자 지정 → 커넥터 → 추가</text>
+
+    <rect x="24" y="220" width="512" height="104" rx="12" fill="#fff" stroke="#e4e7ec"/>
+    <circle cx="59" cy="254" r="19" fill="#2563eb"/>
+    <text x="59" y="261" fill="#fff" text-anchor="middle" font-size="20" font-weight="700">2</text>
+    <text x="92" y="258" fill="#121317" font-size="23" font-weight="700">OnGleam 주소 입력</text>
+    <text x="92" y="294" fill="#4e5561" font-size="22">본문의 사용자 MCP 주소 입력</text>
+
+    <rect x="24" y="336" width="512" height="104" rx="12" fill="#fff" stroke="#e4e7ec"/>
+    <circle cx="59" cy="370" r="19" fill="#2563eb"/>
+    <text x="59" y="377" fill="#fff" text-anchor="middle" font-size="20" font-weight="700">3</text>
+    <text x="92" y="374" fill="#121317" font-size="23" font-weight="700">OAuth 로그인</text>
+    <text x="92" y="410" fill="#4e5561" font-size="22">인증 설정 확인 후 권한 승인</text>
+
+    <rect x="24" y="452" width="512" height="104" rx="12" fill="#fff" stroke="#e4e7ec"/>
+    <circle cx="59" cy="486" r="19" fill="#2563eb"/>
+    <text x="59" y="493" fill="#fff" text-anchor="middle" font-size="20" font-weight="700">4</text>
+    <text x="92" y="490" fill="#121317" font-size="23" font-weight="700">대화에서 켜기</text>
+    <text x="92" y="526" fill="#4e5561" font-size="22">+ → 커넥터 → OnGleam</text>
+    <text x="28" y="594" fill="#69717e" font-size="20">안내 그림 · 실제 화면 아님 · 서버 배포 전</text>
+  </g>
+</svg>
