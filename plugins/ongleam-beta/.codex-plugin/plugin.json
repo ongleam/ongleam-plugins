@@ -1,10 +1,14 @@
 {
   "name": "ongleam-beta",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "OnGleam 콘텐츠·인플루언서·광고 조회와 수집 업무 안내 및 사용자 MCP 연결. Workflows and user MCP connection for OnGleam.",
   "author": {
     "name": "OnGleam"
   },
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
 }
