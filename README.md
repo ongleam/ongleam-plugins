@@ -26,7 +26,7 @@ Claude Code:
 
 ## 개발 및 동기화
 
-`plugins/ongleam-beta/plugin.json`은 이름·버전·설명의 원본이고, `plugins/ongleam-beta/mcp.json`은 사용자 MCP 주소의 원본이다. `skills/use-ongleam/SKILL.md`는 양쪽 호스트가 공유하는 사용 지침이다. 생성된 manifest나 marketplace를 직접 수정하지 않는다.
+서비스 릴리즈의 원본은 `ongleam/ongleam-beta` 저장소의 루트 `package.json.version`과 `plugins/ongleam-beta`다. 이 저장소는 해당 태그의 사용자 플러그인만 공개 배포하는 mirror다. 같은 소스의 플러그인 디렉터리를 복사하고 루트 버전을 맞춘다. `bun run lint`는 mirror manifest와 루트 버전이 다르면 실패한다. `plugins/ongleam-beta/plugin.json`은 배포할 이름·버전·설명을 담고, `plugins/ongleam-beta/mcp.json`은 사용자 MCP 주소의 원본이다. `skills/use-ongleam/SKILL.md`는 양쪽 호스트가 공유하는 사용 지침이다. 생성된 manifest나 marketplace를 직접 수정하지 않는다.
 
 ```sh
 bun run plugins:sync
@@ -37,7 +37,7 @@ claude plugin validate ./.claude-plugin/marketplace.json
 
 생성 파일은 `plugins/ongleam-beta/.claude-plugin/plugin.json`, `plugins/ongleam-beta/.codex-plugin/plugin.json`, `plugins/ongleam-beta/.mcp.json`, `.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`이다. 변경 기여는 PR에서 검토한다.
 
-이 공개 저장소는 사용자 플러그인만 소유한다. 비공개 beta 저장소는 관리자 플러그인과 별도 localhost E2E 플러그인을 소유하며, 사용자 스킬·MCP 설정을 복사하지 않는다.
+이 공개 저장소는 사용자 플러그인만 배포하며 Admin 앱 연결·스킬·credential을 포함하지 않는다. 원본의 서비스·MCP·User/Admin 플러그인과 같은 숫자 릴리즈 버전을 사용한다.
 
 ## MCP 연결 상태
 

@@ -5,6 +5,8 @@ const root = new URL("../../", import.meta.url);
 const pluginPath = "plugins/ongleam-beta";
 const manifest = JSON.parse(await readFile(new URL(`${pluginPath}/plugin.json`, root), "utf8"));
 const { name, version, description, author } = manifest;
+const release = JSON.parse(await readFile(new URL("package.json", root), "utf8"));
+assert.equal(version, release.version, "Mirror plugin version must match the source release version");
 assert.match(name, /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/);
 assert.match(version, /^\d+\.\d+\.\d+$/);
 assert.equal(pluginPath, `plugins/${name}`);
