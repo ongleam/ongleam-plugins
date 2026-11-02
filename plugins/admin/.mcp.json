@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "admin": {
-      "type": "http",
-      "url": "https://beta-api.ongleam.com/mcp/admin"
-    }
-  }
-}

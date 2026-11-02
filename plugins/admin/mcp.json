@@ -1,9 +1,0 @@
-{
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
-  "mcpServers": {
-    "admin": {
-      "type": "streamable-http",
-      "url": "https://beta-api.ongleam.com/mcp/admin"
-    }
-  }
-}
