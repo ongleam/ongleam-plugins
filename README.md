@@ -1,6 +1,6 @@
 # OnGleam 사용자 플러그인
 
-OnGleam의 일반 사용자용 Claude Code·Codex 스킬과 MCP 연결 설정을 한 원본에서 배포한다. 현재는 `use-ongleam` 스킬과 사용자 MCP 주소를 제공한다. 서버 접속·OAuth·도구 발견은 실제 호스트에서 확인해야 하며, 설정만으로 데이터 조회나 수집 성공이 보장되지는 않는다.
+OnGleam의 일반 사용자용 Claude Code·Codex MCP 연결 설정을 한 원본에서 배포한다. 스킬 없이 사용자 MCP 연결만 제공한다. 서버 접속·OAuth·도구 발견은 실제 호스트에서 확인해야 하며, 설정만으로 데이터 조회나 수집 성공이 보장되지는 않는다.
 
 기존 설치와 호환되도록 플러그인 이름은 `ongleam-beta`로 유지한다. 관리자 MCP, 개발 전용 E2E 스킬, 내부 정책·hook은 이 저장소에 포함하지 않는다.
 
@@ -22,11 +22,11 @@ Claude Code:
 /plugin install ongleam-beta@ongleam-beta
 ```
 
-호스트를 다시 시작하거나 지원되는 plugin reload를 실행한 뒤 `use-ongleam` 스킬을 확인한다. 같은 이름의 marketplace가 이미 등록된 경우 등록 위치를 확인하고 기존 설치를 교체한다. 설치 명령은 현재 사용자 호스트의 plugin 설정을 변경한다.
+호스트를 다시 시작하거나 지원되는 plugin reload를 실행한 뒤 MCP 도구 연결을 확인한다. 같은 이름의 marketplace가 이미 등록된 경우 등록 위치를 확인하고 기존 설치를 교체한다. 설치 명령은 현재 사용자 호스트의 plugin 설정을 변경한다.
 
 ## 개발 및 동기화
 
-서비스 릴리즈의 원본은 `ongleam/ongleam-beta` 저장소의 루트 `package.json.version`과 `plugins/ongleam-beta`다. 이 저장소는 해당 태그의 사용자 플러그인만 공개 배포하는 mirror다. 같은 소스의 플러그인 디렉터리를 복사하고 루트 버전을 맞춘다. `bun run lint`는 mirror manifest와 루트 버전이 다르면 실패한다. `plugins/ongleam-beta/plugin.json`은 배포할 이름·버전·설명을 담고, `plugins/ongleam-beta/mcp.json`은 사용자 MCP 주소의 원본이다. `skills/use-ongleam/SKILL.md`는 양쪽 호스트가 공유하는 사용 지침이다. 생성된 manifest나 marketplace를 직접 수정하지 않는다.
+서비스 릴리즈의 원본은 `ongleam/ongleam-beta` 저장소의 루트 `package.json.version`과 `plugins/ongleam-beta`다. 이 저장소는 해당 태그의 사용자 플러그인만 공개 배포하는 mirror다. 같은 소스의 플러그인 디렉터리를 복사하고 루트 버전을 맞춘다. `bun run lint`는 mirror manifest와 루트 버전이 다르면 실패한다. `plugins/ongleam-beta/plugin.json`은 배포할 이름·버전·설명을 담고, `plugins/ongleam-beta/mcp.json`은 사용자 MCP 주소의 원본이다. 생성된 manifest나 marketplace를 직접 수정하지 않는다.
 
 ```sh
 bun run plugins:sync
