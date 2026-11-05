@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ongleam-beta",
-  "version": "1.0.27",
-  "description": "OnGleam 콘텐츠·인플루언서 조회와 수집 업무 안내 및 사용자 MCP 연결. Workflows and user MCP connection for OnGleam.",
+  "version": "1.0.28",
+  "description": "OnGleam 콘텐츠·인플루언서 조회와 수집을 위한 MCP 연결. MCP connection for OnGleam.",
   "author": {
     "name": "OnGleam"
   },
@@ -10,7 +10,8 @@
     "com.openai": {
       "interface": {
         "composerIcon": "./assets/icon.png",
-        "logo": "./assets/icon.png"
+        "logo": "./assets/icon.png",
+        "displayName": "Ongleam Beta"
       }
     }
   }

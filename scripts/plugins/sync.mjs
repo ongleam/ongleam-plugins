@@ -23,8 +23,8 @@ assert.deepEqual(Object.keys(mcp.mcpServers), ["ongleam"]);
 assert.equal(mcp.mcpServers.ongleam.type, "streamable-http");
 assert.equal(mcp.mcpServers.ongleam.url, "https://beta-api.ongleam.com/mcp");
 const outputs = [
-  [`${pluginPath}/.claude-plugin/plugin.json`, { ...identity, skills: "./skills/", mcpServers: "./.mcp.json" }],
-  [`${pluginPath}/.codex-plugin/plugin.json`, { ...identity, skills: "./skills/", mcpServers: "./.mcp.json", interface: interfaceMetadata }],
+  [`${pluginPath}/.claude-plugin/plugin.json`, { ...identity, mcpServers: "./.mcp.json" }],
+  [`${pluginPath}/.codex-plugin/plugin.json`, { ...identity, mcpServers: "./.mcp.json", interface: interfaceMetadata }],
   [`${pluginPath}/.mcp.json`, { mcpServers: { ongleam: { type: "http", url: mcp.mcpServers.ongleam.url } } }],
   [".claude-plugin/marketplace.json", {
     name, description, owner: author, plugins: [{ name, description, source }]
@@ -47,6 +47,4 @@ for (const [path, content] of outputs) {
   }
 }
 
-const skill = await readFile(new URL(`${pluginPath}/skills/use-ongleam/SKILL.md`, root), "utf8");
-assert.match(skill, /^---\r?\nname: use-ongleam\r?\ndescription: .+\r?\n---\r?\n/);
-console.log(check ? "Plugin manifests and shared skill checked" : "Plugin manifests synchronized");
+console.log(check ? "MCP-only plugin manifests checked" : "MCP-only plugin manifests synchronized");
