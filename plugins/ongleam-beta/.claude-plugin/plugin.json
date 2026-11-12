@@ -1,6 +1,6 @@
 {
   "name": "ongleam-beta",
-  "version": "1.0.104",
+  "version": "1.0.105",
   "description": "OnGleam 콘텐츠·인플루언서 조회와 수집을 위한 MCP 연결. MCP connection for OnGleam.",
   "author": {
     "name": "OnGleam"
